@@ -77,12 +77,13 @@ body{
     margin: 1.5px;
     width: 10vw;
     border: 2px solid black;
-    transition: all 1s linear;
+    transition: all 0.5s linear;
 }
 .coloum3{
     margin: 1.5px;
     width: 10vw;
     border: 2px solid black;
+    transition: all 0.5s linear;
 }
 .coloum4{
     margin: 1.5px;
@@ -99,23 +100,39 @@ body{
     width: 10vw;
     border: 2px solid black;
 }
-.coloum2:active{
-    transform: scale(4.1);
+.coloum2:hover{
+    transform: scale(4.5);
     background-color: aqua;
-    width: 50%;
-    height: 70%;
 }
+.coloum3:hover{
+    transform: scale(4.5);
+    background-color: aqua;
+}
+.coloum4:hover{
+    transform: scale(4.5);
+    background-color: aqua;
+}
+.coloum5:hover{
+    transform: scale(4.5);
+    background-color: aqua;
+}
+.coloum6:hover{
+    transform: scale(4.5);
+    background-color: aqua;
+}
+
     </style>
 </head>
 <body>
     <div class="body">
         <div class="row1">
             <div class="coloum1">MON</div>
-            <div class="coloum2"></div>
-            <div class="coloum3"></div>
-            <div class="coloum4"></div>
-            <div class="coloum5"></div>
-            <div class="coloum6"></div>
+            <div class="coloum2 slot" id="slot1" onclick="bringToFront(slot1)"></div>
+            <div class="coloum3 slot" id="slot2" onclick="bringToFront(slot2)"></div>
+            <div class="coloum4 slot" id="slot3" onclick="bringToFront(slot3)"></div>
+            <div class="coloum5 slot" id="slot4" onclick="bringToFront(slot4)"></div>
+            <div class="coloum6 slot" id="slot5" onclick="bringToFront(slot5)"></div>
+
         </div>
         <div class="row2">
             <div class="coloum1">TUE</div>
@@ -158,5 +175,23 @@ body{
             <div class="coloum6"></div>
         </div>
     </div>
+    <script>
+        function bringToFront(id) 
+        {
+            let slots = document.querySelectorAll('.slot');
+            slots.forEach(slot => 
+            {
+                if (slot.id === id) 
+                {
+                    slot.style.zIndex = 1;
+                }  
+                else 
+                {
+                    slot.style.zIndex = 0;
+                }
+            }
+        );
+    }
+    </script>
 </body>
 </htm
