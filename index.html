@@ -35,6 +35,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+/* tabel row*/
 .row1{
     margin: 1px;
     width: 60vw;
@@ -73,6 +74,7 @@ body{
     display: flex;
     flex-direction: row;
 }
+/* table coloum*/
 .coloum1{
     display: flex;
     justify-content: center;
@@ -81,6 +83,7 @@ body{
     width: 10vw;
     border: 2px solid black;
     font-size: 1.5rem;
+    transition: all 0.7s linear;
     font-weight: bold;
 }
 .coloum2{
@@ -90,7 +93,8 @@ body{
     margin: 1.5px;
     width: 10vw;
     border: 2px solid black;
-    transition: all 0.5s linear;    font-size: 1.5rem;
+    transition: all 0.7s linear;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 .coloum3{
@@ -100,7 +104,7 @@ body{
     margin: 1.5px;
     width: 10vw;
     border: 2px solid black;
-    transition: all 0.5s linear;
+    transition: all 0.7s linear;
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -111,7 +115,7 @@ body{
     margin: 1.5px;
     width: 10vw;
     border: 2px solid black;
-    transition: all 0.5s linear;   
+    transition: all 0.7s linear;   
      font-size: 1.5rem;
     font-weight: bold;
 }
@@ -122,7 +126,7 @@ body{
     margin: 1.5px;
     width: 10vw;
     border: 2px solid black;
-    transition: all 0.5s linear;
+    transition: all 0.7s linear;
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -133,10 +137,11 @@ body{
     margin: 1.5px;
     width: 10vw;
     border: 2px solid black;
-    transition: all 0.5s linear;
+    transition: all 0.7s linear;
     font-size: 1.5rem;
     font-weight: bold;
 }
+/* tabel coloum hover*/
 .coloum2:hover{
     transform: scale(2.1);
     height: 150%;
@@ -167,8 +172,72 @@ body{
     width: 70%;
     background-color: aqua;
 }
+/* phone mode*/
+@media (max-width:600px)
+{
+.body{
+    width: 96vw;
+    height: 69vh;
+    display: flex;
+    justify-content: center;
+}
+.row1{
+    width: 90vw;
+    height: 10vh;
+    margin: 1%;
+}
+.row2{
+    width: 90vw;
+    height: 10vh;
+    margin: 1%;
+}
+.row3{
+    width: 90vw;
+    height: 10vh;
+    margin: 1%;
+}
+.row4{
+    width: 90vw;
+    height: 10vh;
+    margin: 1%;
+}
+.row5{
+    width: 90vw;
+    height: 10vh;
+    margin: 1%;
+}
+.row6{
+    width: 90vw;
+    height: 10vh;
+    margin: 1%;
+}
 
-    </style>
+.coloum1{
+    width: 15vw;
+    height: 10vh;
+}
+.coloum2{
+    width: 15vw;
+    height: 10vh;
+}
+.coloum3{
+    width: 15vw;
+    height: 10vh;
+}
+.coloum4{
+    width: 15vw;
+    height: 10vh;
+}
+.coloum5{
+    width: 15vw;
+    height: 10vh;
+}
+.coloum6{
+    width: 15vw;
+    height: 10vh;
+}
+}   
+ </style>
 </head>
 <body>
     <div class="name">
@@ -200,8 +269,13 @@ body{
             <div class="coloum6 slot" id="slot5" onclick="bringToFront(slot5)">5</div>
         </div>
         <div class="row4">
-            <div class="coloum1">THUR</div>
-v        </div>
+            <div class="coloum1">THU</div>
+            <div class="coloum2 slot" id="slot1" onclick="bringToFront(slot1)">1</div>
+            <div class="coloum3 slot" id="slot2" onclick="bringToFront(slot2)">2</div>
+            <div class="coloum4 slot" id="slot3" onclick="bringToFront(slot3)">3</div>
+            <div class="coloum5 slot" id="slot4" onclick="bringToFront(slot4)">4</div>
+            <div class="coloum6 slot" id="slot5" onclick="bringToFront(slot5)">5</div>
+        </div>
         <div class="row5">
             <div class="coloum1">FRI</div>
             <div class="coloum2 slot" id="slot1" onclick="bringToFront(slot1)">1</div>
