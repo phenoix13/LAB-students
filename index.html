@@ -3,326 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDENT VIEW</title>
-    <!--<link rel="stylesheet" href="student.css">-->
+    <title>LAB-STUDENTS</title>
+<!--    <link rel="stylesheet" href="student.css">-->
     <style>
         *{
-    padding: 0%;
     margin: 0%;
+    padding: 0%;
     box-sizing: border-box;
 }
-body{
+.body{
     height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
-.name{
-    border: 3px solid gold;
-    padding: 1%;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 40px;
-}
-.body{
-    width: 60.8vw;
-    height: 60vh;
-    border: 2px solid black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-/* tabel row*/
-.row1{
-    margin: 1px;
-    width: 60vw;
-    height: 10vh;
-    display: flex;
-    flex-direction: row;
-}
-.row2{
-    margin: 1px;
-    width: 60vw;
-    height: 10vh;
-    display: flex;
-    flex-direction: row;
-}.row3{
-    margin: 1px;
-    width: 60vw;
-    height: 10vh;
-    display: flex;
-    flex-direction: row;
-}.row4{
-    margin: 1px;
-    width: 60vw;
-    height: 10vh;
-    display: flex;
-    flex-direction: row;
-}.row5{
-    margin: 1px;
-    width: 60vw;
-    height: 10vh;
-    display: flex;
-    flex-direction: row;
-}.row6{
-    margin: 1px;
-    width: 60vw;
-    height: 10vh;
-    display: flex;
-    flex-direction: row;
-}
-/* table coloum*/
-.coloum1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1.5px;
-    width: 10vw;
-    border: 2px solid black;
-    font-size: 1.5rem;
-    transition: all 0.7s linear;
-    font-weight: bold;
-}
-.coloum2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1.5px;
-    width: 10vw;
-    border: 2px solid black;
-    transition: all 0.7s linear;
+.head{
+    width: 100vw;
+    max-height: 25vh;
+    padding:  25px;
+    text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
+    background-color: rgba(128, 163, 216, 0.575);
 }
-.coloum3{
+.table{ 
+    border: 2px solid #c1d6dd;
+    width: 85%;
+    margin: 25px auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1.5px;
-    width: 10vw;
-    border: 2px solid black;
-    transition: all 0.7s linear;
-    font-size: 1.5rem;
+    justify-content: space-around;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    cursor: pointer;
+}
+table th, table td {
+    border: 2px solid #c1d6dd;
+    padding: 10px;
+    text-align: center;
+}
+table th {
+    background-color: #f0f0f0;
     font-weight: bold;
 }
-.coloum4{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1.5px;
-    width: 10vw;
-    border: 2px solid black;
-    transition: all 0.7s linear;   
-     font-size: 1.5rem;
+.info{
+    font-size: 1.2rem;
     font-weight: bold;
+    margin-left: 7%;
 }
-.coloum5{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1.5px;
-    width: 10vw;
-    border: 2px solid black;
-    transition: all 0.7s linear;
-    font-size: 1.5rem;
-    font-weight: bold;
+input{
+    width: 60vw;
+    height: 70px;
+    font-size: 1rem;
+    color: black;
+    margin: auto 5%;
+    margin-top: 20px;
+    border: 1.5px solid black;
 }
-.coloum6{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1.5px;
-    width: 10vw;
-    border: 2px solid black;
-    transition: all 0.7s linear;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-/* tabel coloum hover*/
-.coloum2:hover{
-    width: 150%;
-    height: 200%;
+td:hover{
     background-color: aqua;
-    z-index: 2;
+    font-weight: bolder;
 }
-.coloum3:hover{
-    width: 150%;
-    height: 200%;
-    background-color: aqua;
-    z-index: 2;
+td:active{
+    background-color: lightgreen;
+    font-weight: bolder;
 }
-.coloum4:hover{
-    width: 150%;
-    height: 200%;
-    background-color: aqua;
-    z-index: 2;
-}
-.coloum5:hover{
-    width: 150%;
-    height: 200%;
-    background-color: aqua;
-    z-index: 2;
-}
-.coloum6:hover{
-    width: 150%;
-    height: 200%;
-    background-color: aqua;
-    z-index: 2;
-}
-/* phone mode*/
 @media (max-width:600px)
 {
-.body{
-    width: 96vw;
-    height: 66vh;
-    display: flex;
-    margin: auto;
-    justify-content: center;
+    .head{
+        width: 100vw;
+        max-height: 15vh;
+        padding:  20px;
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: bold;
+        background-color: rgba(128, 163, 216, 0.575);
+        }
+    .table{ 
+        border: 2px solid #c1d6dd;
+        width: 95%;
+        margin: 25px auto;
+        display: flex;
+        justify-content: space-around;
+        }
+        .info{
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-left: 4%;
+            margin-bottom: 2%;
+        }        
+     input{
+            width: 70vw;
+            height: 60px;
+            font-size: 0.8rem;
+            color: black;
+            margin: auto 5%;
+            margin-top: 5px;
+            margin-bottom: 25px;
+            border: 1.5px solid black;
+        }
+        
 }
-.row1{
-    width: 90vw;
-    height: 10vh;
-    margin: 1px;
-    display: flex;
-}
-.row2{
-    width: 90vw;
-    height: 10vh;
-    margin: 1px;
-    display: flex;
-}
-.row3{
-    width: 90vw;
-    height: 10vh;
-    margin: 1px;
-    display: flex;
-}
-.row4{
-    width: 90vw;
-    height: 10vh;
-    margin: 1px;
-    display: flex;
-}
-.row5{
-    width: 90vw;
-    height: 10vh;
-    margin: 1px;
-    display: flex;
-}
-.row6{
-    width: 90vw;
-    height: 10vh;
-    margin: 1px;
-    display: flex;
-}
-
-.coloum1{
-    width: 15vw;
-    height: 10vh;
-    margin: 1px;
-}
-.coloum2{
-    width: 15vw;
-    height: 10vh;
-    margin: 1px;
-}
-.coloum3{
-    width: 15vw;
-    height: 10vh;
-    margin: 1px;
-}
-.coloum4{
-    width: 15vw;
-    height: 10vh;
-    margin: 1px;
-}
-.coloum5{
-    width: 15vw;
-    height: 10vh;
-    margin: 1px;
-}
-.coloum6{
-    width: 15vw;
-    height: 10vh;
-    margin: 1px;
-}
-}   
- </style>
+    </style>
 </head>
 <body>
-    <div class="name">
-        LAB TIME TABLE
-    </div>
     <div class="body">
-        <div class="row1">
-            <div class="coloum1">MON</div>
-            <div class="coloum2 slot" id="slot1" onclick="bringToFront(slot1)">1</div>
-            <div class="coloum3 slot" id="slot2" onclick="bringToFront(slot2)">2</div>
-            <div class="coloum4 slot" id="slot3" onclick="bringToFront(slot3)">3</div>
-            <div class="coloum5 slot" id="slot4" onclick="bringToFront(slot4)">4</div>
-            <div class="coloum6 slot" id="slot5" onclick="bringToFront(slot5)">5</div>
+        <div class="head">
+            <h1>
+                LAB TIME TABLE
+            </h1>
         </div>
-        <div class="row2">
-            <div class="coloum1">TUE</div>
-            <div class="coloum2 slot" id="slot1" onclick="bringToFront(slot1)">1</div>
-            <div class="coloum3 slot" id="slot2" onclick="bringToFront(slot2)">2</div>
-            <div class="coloum4 slot" id="slot3" onclick="bringToFront(slot3)">3</div>
-            <div class="coloum5 slot" id="slot4" onclick="bringToFront(slot4)">4</div>
-            <div class="coloum6 slot" id="slot5" onclick="bringToFront(slot5)">5</div>
+        <div class="table">
+            <table>
+                <tr>
+                    <th>DAYS/PERIODS</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                </tr>
+                <tr>
+                    <th>Mon</th>
+                    <td>CLASS-a</td>
+                    <td>CLASS-b</td>
+                    <td>CLASS-c</td>
+                    <td>CLASS-d</td>
+                    <td>CLASS-e</td>
+                </tr>
+                <tr>
+                    <th>Tue</th>
+                    <td>CLASS-a</td>
+                    <td>CLASS-b</td>
+                    <td>CLASS-c</td>
+                    <td>CLASS-d</td>
+                    <td>CLASS-e</td>
+                </tr>
+                <tr>
+                    <th>Wed</th>
+                    <td>CLASS-a</td>
+                    <td>CLASS-b</td>
+                    <td>CLASS-c</td>
+                    <td>CLASS-d</td>
+                    <td>CLASS-e</td>
+                </tr>
+                <tr>
+                    <th>Thu</th>
+                    <td>CLASS-a</td>
+                    <td>CLASS-b</td>
+                    <td>CLASS-c</td>
+                    <td>CLASS-d</td>
+                    <td>CLASS-e</td>
+                </tr>
+                <tr>
+                    <th>Fri</th>
+                    <td>CLASS-a</td>
+                    <td>CLASS-b</td>
+                    <td>CLASS-c</td>
+                    <td>CLASS-d</td>
+                    <td>CLASS-e</td>
+                </tr>
+                <tr>
+                    <th>Sat</th>
+                    <td>CLASS-a</td>
+                    <td>CLASS-b</td>
+                    <td>CLASS-c</td>
+                    <td>CLASS-d</td>
+                    <td>CLASS-e</td>
+                </tr>
+            </table>
         </div>
-        <div class="row3">
-            <div class="coloum1">WED</div>
-            <div class="coloum2 slot" id="slot1" onclick="bringToFront(slot1)">1</div>
-            <div class="coloum3 slot" id="slot2" onclick="bringToFront(slot2)">2</div>
-            <div class="coloum4 slot" id="slot3" onclick="bringToFront(slot3)">3</div>
-            <div class="coloum5 slot" id="slot4" onclick="bringToFront(slot4)">4</div>
-            <div class="coloum6 slot" id="slot5" onclick="bringToFront(slot5)">5</div>
-        </div>
-        <div class="row4">
-            <div class="coloum1">THU</div>
-            <div class="coloum2 slot" id="slot1" onclick="bringToFront(slot1)">1</div>
-            <div class="coloum3 slot" id="slot2" onclick="bringToFront(slot2)">2</div>
-            <div class="coloum4 slot" id="slot3" onclick="bringToFront(slot3)">3</div>
-            <div class="coloum5 slot" id="slot4" onclick="bringToFront(slot4)">4</div>
-            <div class="coloum6 slot" id="slot5" onclick="bringToFront(slot5)">5</div>
-        </div>
-        <div class="row5">
-            <div class="coloum1">FRI</div>
-            <div class="coloum2 slot" id="slot1" onclick="bringToFront(slot1)">1</div>
-            <div class="coloum3 slot" id="slot2" onclick="bringToFront(slot2)">2</div>
-            <div class="coloum4 slot" id="slot3" onclick="bringToFront(slot3)">3</div>
-            <div class="coloum5 slot" id="slot4" onclick="bringToFront(slot4)">4</div>
-            <div class="coloum6 slot" id="slot5" onclick="bringToFront(slot5)">5</div>
-        </div>
-        <div class="row6">
-            <div class="coloum1">SAT</div>
-            <div class="coloum2 slot" id="slot1" onclick="bringToFront(slot1)">1</div>
-            <div class="coloum3 slot" id="slot2" onclick="bringToFront(slot2)">2</div>
-            <div class="coloum4 slot" id="slot3" onclick="bringToFront(slot3)">3</div>
-            <div class="coloum5 slot" id="slot4" onclick="bringToFront(slot4)">4</div>
-            <div class="coloum6 slot" id="slot5" onclick="bringToFront(slot5)">5</div>
+        <div class="info">
+            <h4>Please select the class for the information</h4>
+            <form action="" method="get">
+                <input type="text" placeholder="empty" disabled>
+            </form>
         </div>
     </div>
-    <script>
-        function bringToFront(id) 
-        {
-            let slots = document.querySelectorAll('.slot');
-            slots.forEach(slot => 
-            {
-                if (slot.id === id) 
-                {
-                    slot.style.zIndex = 1;
-                }  
-                else 
-                {
-                    slot.style.zIndex = 0;
-                }
-            }
-        );
-    }
-    </script>
 </body>
-</htmL>
+</html>
